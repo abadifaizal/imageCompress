@@ -1,0 +1,32 @@
+{
+  "name": "imageCompress",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@jsquash/avif": "^2.1.1",
+    "@jsquash/jpeg": "^1.6.0",
+    "@jsquash/oxipng": "^2.3.0",
+    "@jsquash/png": "^3.1.1",
+    "@jsquash/resize": "^2.1.1",
+    "@jsquash/webp": "^1.5.0",
+    "fflate": "^0.8.3",
+    "nuxt": "^4.6.4",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.14"
+  },
+  "engines": {
+    "node": "^24.22.1"
+  }
+}
