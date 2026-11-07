@@ -1,4 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// GitHub Pages serves the site at https://<user>.github.io/<repo>/
+const baseURL = process.env.NUXT_APP_BASE_URL || '/'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -6,14 +9,17 @@ export default defineNuxtConfig({
   // Everything runs in the browser; no server needed.
   ssr: false,
 
+  css: ['~/assets/css/main.css'],
+
   app: {
-    // GitHub Pages serves the site at https://<user>.github.io/<repo>/
-    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    baseURL,
     head: {
       title: 'Image Compress',
+      htmlAttrs: { lang: 'en' },
       meta: [
         { name: 'description', content: 'Compress, resize and convert images entirely in your browser.' },
       ],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: `${baseURL}favicon.ico` }],
     },
   },
 
